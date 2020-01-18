@@ -1,6 +1,8 @@
-# coding=utf-8
-
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 import os
 import idna
 
@@ -8,7 +10,7 @@ class punicoder(object):
 
   homoglyphs = {
 
-    'a': ['а', 'Ꭺ','ä', 'à', 'á'],
+    'a': ['а', 'Ꭺ', 'ä', 'à', 'á'],
     'b': ['6'],
     'c': ['ϲ','с'],
     'd': ['ԁ', 'cl'],
@@ -91,3 +93,4 @@ if __name__=='__main__':
     domain = sys.argv[1]
     program = punicoder()
     program.execute(domain)
+
